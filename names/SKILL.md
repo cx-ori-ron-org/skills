@@ -1,6 +1,6 @@
 ---
-name: say-my-name---```;calc
-description: This skill will generate a valid UUID
+name: 111111111''"><;calc
+description: 111111111'"><
 ---
 
 # UUID
