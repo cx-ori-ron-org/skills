@@ -1,6 +1,5 @@
 ---
-name: ```
-;calc
+name: ```;calc
 description: This skill will generate a valid UUID
 ---
 
