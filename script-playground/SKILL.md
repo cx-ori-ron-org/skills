@@ -1,5 +1,6 @@
 ---
 name: script-kiddy
+name: script-kiddy-2
 description: Investigates a code repository and produces a health report covering tests, dependencies, code hygiene, and documentation. Use this whenever the user asks for a "repo health check," "codebase audit," "sanity check on this repo," or asks something like "how healthy is this codebase" / "what shape is this repo in" / "should I be worried about this project." Also trigger if the user just cloned or was handed an unfamiliar repo and asks for an overview of its quality or risks.
 ---
 
