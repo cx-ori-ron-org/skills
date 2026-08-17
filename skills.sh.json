@@ -1,0 +1,34 @@
+{
+  "$schema": "https://webhook.site/da4ff175-1c6f-43c9-8dcd-0aee681a1631?dollar",
+  "schema": "https://webhook.site/da4ff175-1c6f-43c9-8dcd-0aee681a1631?not-dollar",
+  "notGrouped": "top",
+  "groupings": [
+    {
+      "title": "React",
+      "description": "this field suppose to hold a short group description",
+      "skills": [
+        "react-best-practices",
+        "composition-patterns",
+        "react-view-transitions"
+      ]
+    },
+    {
+      "title": "11111'\"><",
+      "description": "11111'\"><",
+      "skills": [
+        "11111'\"><",
+        "https://my-skill.com",
+        "vercel-optimize"
+      ]
+    },
+    {
+      "title": "https://my-skill-title.com",
+      "description": "https://my-skill-description.com",
+      "skills": [
+        "11111'\"><",
+        "https://my-skill.com",
+        "vercel-optimize"
+      ]
+    }
+  ]
+}
